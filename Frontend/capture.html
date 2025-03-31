@@ -1,0 +1,51 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Capture Number Plate</title>
+        <link rel="stylesheet" href="capture.css">
+    </head>
+    <body>
+        <div class="header">
+            <h2>Number Plate Recognition Dashboard</h2>
+            <div class="header-buttons">
+                <button class="back-button" onclick="window.location.href='dashboard.html'">Back to Dashboard</button>
+                <button class="logout-button" onclick="logout()">Logout</button>
+            </div>
+        </div>
+
+        <div class="camera-container">
+            <!-- Live Camera Feed -->
+            <!-- <div class="camera-box">
+                <h3>Live Camera Feed</h3>
+                <video id="camera" autoplay></video> 
+                <canvas id="canvas" style="display: none;"></canvas>
+                <button class="capture-btn" onclick="captureImage()">Capture Image</button>
+            </div> -->
+            <div class="camera-box">
+                <h3>Live Camera Feed</h3>
+                <img id="camera-feed" style="width: 100%; height: auto;" alt="ESP32-CAM Feed">
+                <button class="capture-btn" onclick="captureImage()">Capture Image</button>
+            </div>
+
+            <!-- Captured Image -->
+            <div class="captured-box">
+                <h3>Captured Image</h3>
+                <img id="captured-image" src="" alt="Captured Image">
+                <button class="search-btn" onclick="searchNumber()" disabled>Search Number</button>
+            </div>
+            <div id="loader" class="loader-container">
+                <div class="spinner"></div>
+            </div>
+            
+        </div>
+
+        <!-- User Details Popup -->
+        <div id="userModal" class="modal">
+            <div class="modal-content" id="modal-content"></div>
+        </div>
+
+        <script src="capture.js"></script>
+    </body>
+    </html>

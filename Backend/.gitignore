@@ -1,0 +1,45 @@
+# Python-related files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Virtual environment
+venv/
+env/
+*.env
+.env.local
+.env.production
+.env.development
+
+# Dependency files
+Pipfile
+Pipfile.lock
+poetry.lock
+requirements.txt
+
+# Logs and debug files
+*.log
+debug.log
+nohup.out
+
+# Flask-related files
+instance/
+*.db
+*.sqlite
+
+# Frontend build files (if using React/Vue/Angular)
+node_modules/
+dist/
+build/
+
+# ESP32-CAM image storage (optional, if images are stored locally)
+captured_images/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Git-related files
+.git/

@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+}
+.header-buttons {
+    margin-left: auto; /* Push buttons to the right */
+    display: flex;
+    gap: 10px;
+}
+
+.register-button{
+    padding: 10px 20px;
+    background-color:#fff3cd;
+    color: rgb(26, 24, 24);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.capture-page-btn{
+    padding: 10px 20px;
+    background-color:#ffc107;
+    color: rgb(26, 24, 24);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.logout-button {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.logout-button:hover {
+    background-color: darkred;
+}
+
+#camera {
+    width: 640px;
+    height: 480px;
+    border: 2px solid black;
+}
+
+#captured-image {
+    margin-top: 20px;
+    width: 640px;
+    height: 480px;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 18px;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+td[style*="red"] {
+    background-color: #ffcccc;
+}
+
+td[style*="yellow"] {
+    background-color: #fff3cd;
+}
+
+td[style*="green"] {
+    background-color: #d4edda;
+}
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+.close-btn {
+    color: red;
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+.search-container {
+    display: flex;
+    padding-top: 50px;
+    height: 50px;
+
+    justify-content: flex-end;  
+    margin-right: 200px;
+    /* align-items: center; */
+    gap: 10px; /* Adds spacing between input and button */
+    margin-bottom: 10px;
+}
+.camera-container {
+    display: flex;
+    justify-content: space-between; /* Aligns left & right */
+    align-items: center;
+    gap: 20px; /* Space between images */
+    margin-bottom: 20px;
+}
+
+.camera-box,
+.captured-box {
+    display: flex;
+    flex-direction: column; /* Stack image & button */
+    align-items: center;
+    width: 48%; /* Adjust width */
+}
+
+.camera-box img,
+.captured-box img {
+    width: 100%;
+    max-width: 500px; /* Adjust as needed */
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+.capture-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.capture-btn:hover {
+    background-color: #0056b3;
+}
+.update-btn, .delete-btn {
+    padding: 5px 10px;
+    margin: 2px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.update-btn {
+    background-color: #ffc107;
+    color: black;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.update-btn:hover {
+    background-color: #e0a800;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.pagination button {
+    padding: 8px 12px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}

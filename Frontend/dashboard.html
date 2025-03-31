@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Plate Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="header">
+        <h2>Number Plate Recognition Dashboard</h2>
+        <div class="header-buttons">
+            <button class="register-button" onclick="window.location.href='register.html'">Register Admin</button>
+            <button class="capture-page-btn" onclick="window.location.href='capture.html'">Open Capture Window</button>
+            <button class="logout-button" onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+   
+    <div class="search-container">
+        <button class="add-user-btn" onclick="window.location.href='register-user.html'">User Register</button>
+        <h2>Search User</h2>
+        <input type="text" id="search-input" placeholder="Search by Plate Number">
+        <button onclick="searchData()">Search</button>
+    </div>
+
+    <!-- Modal for displaying user details -->
+    <div id="userDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>User Details</h2>
+            <p><strong>Name:</strong> <span id="user-name"></span></p>
+            <p><strong>Plate Number:</strong> <span id="user-plate-number"></span></p>
+            <p><strong>Status:</strong> <span id="user-status"></span></p>
+            <p><strong>Challan Reason:</strong> <span id="user-challan-reason"></span></p>
+        </div>
+    </div>
+
+    <h3>Number Plate Records</h3>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Plate Number</th>
+            <th>Status</th>
+            <th>Challan Reason</th>
+            <th>Operations</th> 
+        </tr>
+        <tbody id="data-table"></tbody>
+    </table>
+
+    <div class="pagination">
+        <button onclick="previousPage()" id="prevBtn">Previous</button>
+        <span id="pageNumber">Page 1</span>
+        <button onclick="nextPage()" id="nextBtn">Next</button>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
